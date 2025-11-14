@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentModuleId = null;
     let editingQuestionId = null;
     let cachedForms = [];
-    const API_BASE_URL = 'http://localhost:3000'; // Cambiar a tu URL de producción cuando despliegues
+    // URL del API se carga desde config.js
 
     // --- API WRAPPER ---
     const api = {

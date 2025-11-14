@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const API_BASE_URL = 'http://localhost:3000'; // Cambiar a tu URL de producción cuando despliegues
+    // URL del API se carga desde config.js
     const formContent = document.getElementById('form-content');
     const loading = document.getElementById('loading');
     const successMessage = document.getElementById('success-message');
