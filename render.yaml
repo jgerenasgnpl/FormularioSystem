@@ -1,0 +1,27 @@
+services:
+  # Backend API
+  - type: web
+    name: formulariosystem-backend
+    runtime: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: SUPABASE_URL
+        sync: false  # Se configura manualmente en Render dashboard
+      - key: SUPABASE_SERVICE_KEY
+        sync: false  # Se configura manualmente en Render dashboard
+
+  # Frontend estático
+  - type: web
+    name: formulariosystem-frontend
+    runtime: static
+    buildCommand: echo "No build needed"
+    staticPublishPath: ./frontend
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate

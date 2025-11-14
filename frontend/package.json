@@ -1,0 +1,8 @@
+{
+  "name": "formulariosystem-frontend",
+  "version": "1.0.0",
+  "description": "Frontend estático para FormularioSystem",
+  "scripts": {
+    "build": "echo 'No build needed - static files'"
+  }
+}
