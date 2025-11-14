@@ -28,10 +28,7 @@
 body {
     font-family: var(--font-family);
     color: var(--color-text);
-    background-image: url('system2.PNG');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background: #f5f7fa;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,21 +43,59 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
+    background-image: url('Imagenfondo.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .auth-box {
     width: 100%;
     max-width: 420px;
     text-align: center;
-    background: var(--color-background);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     padding: 3rem 2.5rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(30, 90, 158, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .auth-box h1 {
     margin-bottom: 2rem;
     font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* Estilos específicos para inputs en auth-page */
+#auth-page input[type="email"],
+#auth-page input[type="password"] {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(30, 90, 158, 0.2);
+}
+
+#auth-page input[type="email"]:focus,
+#auth-page input[type="password"]:focus {
+    background: white;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(30, 90, 158, 0.15);
+}
+
+#auth-page .btn {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    box-shadow: 0 4px 15px rgba(30, 90, 158, 0.3);
+    font-weight: 600;
+}
+
+#auth-page .btn:hover {
+    background: linear-gradient(135deg, var(--color-primary-darker) 0%, var(--color-primary) 100%);
+    box-shadow: 0 6px 20px rgba(30, 90, 158, 0.4);
+    transform: translateY(-2px);
 }
 
 /* --- LAYOUT DE LA APLICACIÓN PRINCIPAL --- */
