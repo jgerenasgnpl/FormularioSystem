@@ -1,0 +1,26 @@
+services:
+  backend:
+    build: ./backend
+    container_name: formulariosystem-backend
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./backend/.env
+    restart: unless-stopped
+    networks:
+      - formulariosystem-network
+
+  frontend:
+    build: ./frontend
+    container_name: formulariosystem-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - formulariosystem-network
+
+networks:
+  formulariosystem-network:
+    driver: bridge

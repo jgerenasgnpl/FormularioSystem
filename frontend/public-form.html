@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Público</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .public-form-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 2rem auto;
+            background: var(--color-background);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+        }
+
+        .public-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem 0;
+            border-bottom: 2px solid var(--color-primary);
+            margin-bottom: 2rem;
+        }
+
+        .public-header img {
+            height: 60px;
+            width: auto;
+        }
+
+        .public-header h1 {
+            color: var(--color-primary);
+            font-size: 1.8rem;
+        }
+
+        .success-message {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .error-message {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: var(--color-primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="public-form-container">
+        <div class="public-header">
+            <img src="system2.PNG" alt="Logo">
+            <h1 id="form-title">Cargando formulario...</h1>
+        </div>
+        
+        <div id="loading" class="loading">
+            <p>Cargando formulario público...</p>
+        </div>
+
+        <div id="form-content" style="display: none;">
+            <!-- El formulario se renderizará aquí -->
+        </div>
+
+        <div id="success-message" class="success-message" style="display: none;">
+            <h2>¡Formulario enviado exitosamente!</h2>
+            <p>Gracias por completar el formulario.</p>
+        </div>
+
+        <div id="error-message" class="error-message" style="display: none;">
+            <h2>Error</h2>
+            <p id="error-text">Ha ocurrido un error al cargar el formulario.</p>
+        </div>
+    </div>
+
+    <script src="public-form.js"></script>
+</body>
+</html>
